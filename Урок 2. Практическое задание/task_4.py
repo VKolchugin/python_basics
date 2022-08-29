@@ -14,3 +14,7 @@
 1. раз
 2. перерефриж
 """
+arr = list(input('Введите слова через пробел: ').split(' '))
+for ind, el in enumerate(arr, 1):
+    print(ind, el if len(el) < 10 else el[:10])
+

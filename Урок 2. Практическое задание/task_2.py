@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+arr = list(input('Введите целые числа через пробел: ').split(' '))
+print(arr)
+for i in range(0, len(arr) - 1, 2):
+    arr[i], arr[i + 1] = arr[i + 1], arr[i]
+print(arr)

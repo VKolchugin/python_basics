@@ -25,3 +25,26 @@
 “ед”: [“шт.”]
 }
 """
+items = []
+items_count = int(input('Введите количество товаров: '))
+for i in range(1, items_count + 1):
+    print(f'Заполните информацию о {i} товаре')
+    items.append((i, {'название': input("название товара: "), 'цена': int(input("цена товара: ")),
+                    'количество': int(input("количество товаров: ")),
+                    'eд': input("единица измерения: ")}))
+print(items)
+
+items_parsing = {}
+name = []
+price = []
+count = []
+measure = []
+for item in range(len(items)):
+    name.append(items[item][1]['название'])
+    price.append(items[item][1]['цена'])
+    count.append(items[item][1]['количество'])
+    measure.append(items[item][1]['eд'])
+items_parsing.update({'название': name, 'цена': price, 'количество': count, 'eд': measure})
+print(items_parsing)
+
+

@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+py_types = [1, '2', 2.5, {25, 56, 42}, ['a', 'b'], None, {'name': 'Mike', 'qge': 99}, True]
+for el in py_types:
+    print(type(el))
