@@ -6,3 +6,28 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def get_sub_sum(temp_sum):
+    """
+    :param temp_sum: строка чисел, разделенных пробелом.
+    :return: Сумма вновь введенных чисел + flag при ValueError
+    """
+    sub_sum = 0
+    try:
+        for i in list(temp_sum.split()):
+            sub_sum += int(i)
+        return sub_sum, True
+    except ValueError:
+        return sub_sum, False
+
+
+temp_sum = None
+summa = 0
+flag = True
+while flag:
+    temp_sum = input()
+    temp_sum, flag = get_sub_sum(temp_sum)
+    summa += temp_sum
+
+print(summa)

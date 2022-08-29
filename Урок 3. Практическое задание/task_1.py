@@ -17,3 +17,21 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+a = float(input('Введите первое число:'))
+b = float(input('Введите второе число:'))
+
+
+def get_quotient(dividend, divider):
+    """
+    :param dividend: делимое
+    :param divider: делитель
+    :return: частное = a / b
+    """
+    try:
+        return dividend / divider
+    except ZeroDivisionError:
+        print("Вы что? Пытаетесь делить на 0!")
+
+
+print(get_quotient(a, b))
